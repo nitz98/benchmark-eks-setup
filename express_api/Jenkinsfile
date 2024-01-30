@@ -1,28 +1,27 @@
 pipeline {
-    agent none
-    options {
-      	skipDefaultCheckout()
-  		disableConcurrentBuilds()
-    }
+    agent any
 
     stages {
-
-      stage('docker-build'){
-          agent any
-
-                steps  {
-
-                        checkout scm
-                        sh 'pwd'
-                        sh 'cd express_api'
-                        sh 'pwd'
-                        sh 'make build'
-
-                        archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
+        stage('docker-build') {
+            steps {
+                // Change working directory to the subdirectory 'express_api'
+                dir('express_api') {
+                    // Run commands inside the 'express_api' directory
+                    checkout scm
+                    sh 'pwd'
+                    sh 'make build'
                 }
-      }
+                // Continue running steps in the original working directory
+                sh 'echo "Back to the original working directory"'
+            }
+        }
+    }
 
-    } // End stages
-
-} // En
+    post {
+        always {
+            // Archive artifacts, etc.
+            archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
+        }
+    }
+}
 
