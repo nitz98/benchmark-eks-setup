@@ -1,0 +1,27 @@
+pipeline {
+    agent none
+    options {
+      	skipDefaultCheckout()
+  		disableConcurrentBuilds()
+    }
+
+    stages {
+
+      stage('docker-build'){
+          agent any
+
+                steps  {
+
+                        checkout scm
+                        sh ''' pwd
+                         cd rails_api
+                         pwd 
+                         make build '''
+
+                }
+      }
+
+    } // End stages
+
+} // En
+
