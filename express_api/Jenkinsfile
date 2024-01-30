@@ -15,8 +15,8 @@ pipeline {
                         checkout scm
                         sh ''' pwd
                          cd express_api
-                         pwd '''
-                        sh 'make build'
+                         pwd 
+                         make build '''
 
                         archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
                 }
