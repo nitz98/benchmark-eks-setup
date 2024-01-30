@@ -12,7 +12,6 @@ epoch=$(date +%s)
 tag="${epoch}"
 git_branch=${BRANCH_NAME}
 ecr_repo_name="express-api"
-echo "$tag" > docker-tag.txt
 
 aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 940937972577.dkr.ecr.ap-south-1.amazonaws.com
 #$(aws ecr get-login --no-include-email --region ${AWS_REGION})

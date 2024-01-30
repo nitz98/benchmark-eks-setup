@@ -18,7 +18,6 @@ pipeline {
                          pwd 
                          make build '''
 
-                        archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
                 }
       }
 
