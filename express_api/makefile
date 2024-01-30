@@ -1,2 +1,3 @@
-docker-build:
+build:
 	./build.sh
+
