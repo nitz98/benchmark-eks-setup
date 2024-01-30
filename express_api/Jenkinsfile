@@ -14,7 +14,6 @@ pipeline {
 
                         checkout scm
                         sh 'pwd'
-                        sh 'cd /var/lib/jenkins/workspace/Build_express_api_main/express_api'
                         sh 'make build'
 
                         archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
