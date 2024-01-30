@@ -1,5 +1,5 @@
 const appConfig = {
-  port: 4001,
+  port: 3000,
   loggingMode: 'info',
 };
 
