@@ -83,6 +83,7 @@ $ terraform init
 $ terraform plan
 $ terraform apply
 ```
+![build Job Image](./images/bucket.png)
 
 ### Create VPC
 
@@ -94,6 +95,7 @@ $ terraform init
 $ terraform plan
 $ terraform apply
 ```
+![build Job Image](./images/vpc.png)
 
 ### Create Bastion Server
 
@@ -105,6 +107,7 @@ $ terraform init
 $ terraform plan
 $ terraform apply
 ```
+![build Job Image](./images/jump.png)
 
 ### Create EKS Cluster
 
@@ -116,6 +119,7 @@ $ terraform init
 $ terraform plan
 $ terraform apply
 ```
+![build Job Image](./images/eks.png)
 
 ### EKSCTL setup
 
