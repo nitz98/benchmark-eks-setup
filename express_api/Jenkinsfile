@@ -13,7 +13,7 @@ pipeline {
                 steps  {
 
                         checkout scm
-                        sh 'make docker-build'
+                        sh 'make'
 
                         archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
                 }
