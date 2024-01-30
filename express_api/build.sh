@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 
 #Go to root directory
 BASEDIR=$(dirname "$0")
