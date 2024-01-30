@@ -1,3 +1,3 @@
 build:
-	./build.sh
+	./express_api/build.sh
 
