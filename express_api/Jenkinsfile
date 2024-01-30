@@ -1,23 +1,27 @@
 pipeline {
     agent none
     options {
-        skipDefaultCheckout()
-        disableConcurrentBuilds()
+      	skipDefaultCheckout()
+  		disableConcurrentBuilds()
     }
 
     stages {
-        stage('docker-build') {
-            agent any
 
-            steps {
-                dir('express_api') {
-                    checkout scm
-                    sh 'pwd'
-                    sh 'make build'
-                    archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
+      stage('docker-build'){
+          agent any
+
+                steps  {
+
+                        checkout scm
+                        sh 'pwd'
+                        sh 'cd express_api'
+                        sh 'make build'
+
+                        archiveArtifacts artifacts: 'docker-tag.txt', onlyIfSuccessful: true
                 }
-            }
-        }
-    }
-}
+      }
+
+    } // End stages
+
+} // En
 
