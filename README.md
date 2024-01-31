@@ -169,7 +169,7 @@ Created multibranch pipeline so that we can build multiple branches. The job wil
 
 #### Deploy job url: http://3.6.35.80:8080/job/Deploy/job/Deploy-apps/
 
-Created paramaterized job deployment of multiple apps to eks cluster.
+Created paramaterized job for deployment of multiple apps to eks cluster.
 User can select namespace, app name and tag which he want to deploy.
 Tag will be automatically fetched from ECR using groovy script. Groovy script is available in kubernetes folder.
 
