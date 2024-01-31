@@ -171,7 +171,7 @@ Created multibranch pipeline so that we can build multiple branches. The job wil
 
 Created paramaterized job for deployment of multiple apps to eks cluster.
 User can select namespace, app name and tag which he want to deploy.
-Tag will be automatically fetched from ECR using groovy script. Groovy script is available in kubernetes folder.
+Tag will be automatically fetched from ECR using groovy script based on app name. Groovy script is available in kubernetes folder.
 
 ![Deploy Job Image](./images/deployjob.png)
 
