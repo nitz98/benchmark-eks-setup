@@ -191,6 +191,8 @@ Application is accessible at below endpoints:
 
 ###### http://test.rails.com/api/benchmarks
 
+![\rails Image](./images/rails-a.png)
+
 ### Note: Since I have not created any DNS please use below host entry to access it on browser
 
 #### 3.108.114.26 test.rails.com test.express.com
